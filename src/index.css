@@ -1,0 +1,13 @@
+:root {
+    --background: #FCF9F7;
+    --foreground: #354252;
+    --button: #354252;
+    --text: #FFFFFF;
+    --header-text: K2D, serif;
+    --normal-text: Inter, serif;
+}
+
+html, body, #root, #container {
+    margin: 0;
+    height: 100%;
+}

@@ -1,0 +1,17 @@
+
+#container {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 1rem 0 1rem 0;
+}
+
+.page {
+  background-color: var(--foreground);
+  height: 41rem;
+  margin: 0 1rem 0 1rem;
+  border-radius: 20px 20px 0 0;
+}
