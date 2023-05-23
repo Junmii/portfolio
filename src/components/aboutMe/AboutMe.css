@@ -1,0 +1,71 @@
+p {
+    font-family: var(--header-text);
+    font-weight: normal;
+    color: var(--text);
+    text-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+    /*white-space: pre;*/
+    /*line-height: 1rem;*/
+}
+
+h2 {
+    font-family: var(--header-text);
+    color: var(--text);
+    text-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.current {
+    margin-top: 0;
+}
+
+.learning {
+    background-color: var(--background);
+    width: 30rem;
+    height: 10rem;
+    border-radius: 17px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+    align-items: center;
+}
+
+.learning img, .known img {
+    height: 70%;
+    margin: 1rem;
+}
+
+.figma{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.react {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: 7rem;
+}
+
+.known {
+    background-color: var(--background);
+    width: 30rem;
+    height: 20rem;
+    border-radius: 17px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+    align-items: center;
+}
+
+.languagesAndFrameworks {
+    margin: 0 2rem;
+}
+
+.intro {
+    margin: 0 3rem 0 5rem
+}

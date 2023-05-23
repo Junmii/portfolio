@@ -8,6 +8,11 @@
 }
 
 html, body, #root, #container {
-    margin: 0;
+    /*margin: 0;*/
     height: 100%;
+    overflow: hidden;
+}
+
+html {
+    background-color: var(--background);
 }
