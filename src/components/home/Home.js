@@ -1,6 +1,5 @@
 import "./Home.css";
 import me from "../../resources/me.png"
-import {useLocation} from "react-router-dom";
 
 export default function Home() {
     return (

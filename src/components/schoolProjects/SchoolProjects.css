@@ -1,0 +1,56 @@
+.projectsContainer {
+    display: grid;
+    /*grid-template-rows: 10px 40px 40px 40px;*/
+    /*grid-auto-columns: minmax(50px, auto);*/
+    justify-items: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    padding: 0 1% 5% 1%;
+}
+
+.first, .second, .third {
+    background-color: var(--sections);
+    height: 80%;
+    width: 90%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 0 2% 0 2%;
+}
+
+.pContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pContainer p {
+    max-width: 90%;
+    text-align: center;
+}
+
+/*.first img, .second img {*/
+/*    height: 70%;*/
+/*    width: auto;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+.third img, .first img, .second img {
+    height: 80%;
+    width: auto;
+}
+
+/*.first p, .second p {*/
+/*    font-size: 32px;*/
+/*    margin-bottom: 2.5rem;*/
+/*    text-align: center;*/
+/*}*/
+
+.third p, .first p, .second p {
+    font-size: 32px;
+    text-align: center;
+}
