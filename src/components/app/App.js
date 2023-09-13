@@ -3,11 +3,12 @@ import NavigationBar from "../navbar/NavigationBar";
 import Home from "../home/Home";
 import {Route, Routes} from "react-router-dom";
 import AboutMe from "../aboutMe/AboutMe";
-import SchoolProjects from "../schoolProjects/SchoolProjects";
+import Projects from "../projects/Projects";
 
 import {useState, useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import {useRef} from "react";
+import Contact from "../contact/Contact";
 
 function App() {
     const location = useLocation();
@@ -31,10 +32,17 @@ function App() {
                 }, 360)
                 break;
             }
-            case "/SchoolProjects":
+            case "/Projects":
             {
                 setTimeout(() => {
                     pageRef.current.style = "background-image: null;"
+                }, 360)
+                break;
+            }
+            case "/Contact":
+            {
+                setTimeout(() => {
+                    pageRef.current.style = "background-image: url('data:image/svg+xml,<svg viewBox=\"0 0 135 135\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"%234B5E76\" d=\"M39.5,-57.3C54.2,-52.1,71.1,-46.1,78.2,-34.6C85.3,-23,82.5,-5.8,73.7,6C64.9,17.8,50,24.1,40,33.6C30.1,43.1,25.1,55.7,16.5,59.8C8,64,-4.1,59.5,-19.8,58.8C-35.4,58.1,-54.7,61.1,-67.9,54.2C-81,47.3,-88.1,30.5,-86.9,14.7C-85.8,-1.1,-76.5,-15.9,-67.2,-28.4C-57.9,-40.9,-48.6,-51,-37.4,-57.9C-26.2,-64.7,-13.1,-68.3,-0.3,-67.8C12.4,-67.3,24.8,-62.6,39.5,-57.3Z\" transform=\"translate(75 70)\" /></svg>');"
                 }, 360)
                 break;
             }
@@ -68,9 +76,8 @@ function App() {
                           <Routes location={displayLocation}>
                               <Route path="/" element={<Home />}></Route>
                               <Route path="/AboutMe" element={<AboutMe />}>About me</Route>
-                              <Route path="/SchoolProjects" element={<SchoolProjects />}>School projects</Route>
-                              <Route path="/PersonalProjects" element={<AboutMe />}>About me</Route>
-                              <Route path="/Contact" element={<AboutMe />}>About me</Route>
+                              <Route path="/Projects" element={<Projects />}>Projects</Route>
+                              <Route path="/Contact" element={<Contact />}>About me</Route>
                           </Routes>
                       </div>
                   </div>

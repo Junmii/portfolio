@@ -1,18 +1,25 @@
 
 .container {
   background-color: var(--background);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .pageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 95vh;
+  /*height: 95vh;*/
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80% 80%;
+  height: 100%;
+  /*position: absolute;*/
+  /*bottom: 0;*/
 }
 
 header {
@@ -25,14 +32,24 @@ header {
   background-color: var(--foreground);
   margin: 0 1rem 0 1rem;
   border-radius: 20px 20px 0 0;
+  height: 100%;
+  /*position: absolute;*/
+  /*bottom: 0;*/
 }
 
 .fadeIn {
   animation: 0.5s fadeIn forwards;
+  height: 100%;
 }
 
 .fadeOut {
   animation: 0.5s fadeOut forwards;
+  height: 100%;
+}
+
+.main {
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes fadeIn {
@@ -56,3 +73,14 @@ header {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .pageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+  }
+}
+
+

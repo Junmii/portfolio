@@ -1,0 +1,50 @@
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.linkContainer {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    margin-top: 0;
+}
+
+.emailH2 {
+    margin-top: 0;
+}
+
+.icon {
+    height: 120px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .icon {
+        height: 100px;
+    }
+
+    .linkContainer {
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .linkContainer img {
+        height: 60px;
+    }
+
+    .linkContainer {
+        width: 15rem;
+    }
+
+    .contactContainer {
+        max-width: 20rem;
+    }
+}

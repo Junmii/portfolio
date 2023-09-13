@@ -11,7 +11,7 @@ h2 {
     font-family: var(--header-text);
     color: var(--text);
     text-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
-    font-size: 28px;
+    /*font-size: 28px;*/
     margin-bottom: 0.5rem;
     text-align: center;
 }
@@ -69,3 +69,89 @@ h2 {
 .intro {
     margin: 0 3rem 0 5rem
 }
+
+@media screen and (max-width: 900px) {
+    .infoContainer {
+        max-width: 500px;
+        margin: 0;
+    }
+
+    .intro {
+        font-family: var(--header-text);
+        font-weight: normal;
+        color: var(--text);
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+        margin: 0;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .languagesAndFrameworks {
+        max-width: 20rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .learning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        max-width: 20rem;
+        height: auto;
+    }
+
+    .known {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 20rem;
+        height: auto;
+    }
+
+    .learning img, .known img {
+        height: 60px;
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .intro p {
+        font-size: 14px;
+    }
+
+    .learning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        max-width: 19rem;
+        height: auto;
+    }
+
+    .known {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 19rem;
+        height: auto;
+    }
+
+    .learning img, .known img {
+        height: 50px;
+        margin: 1rem;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+

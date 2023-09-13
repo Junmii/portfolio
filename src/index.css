@@ -9,11 +9,61 @@
 }
 
 html, body, #root, #container {
-    /*margin: 0;*/
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 html {
     background-color: var(--background);
 }
+
+h2 {
+    letter-spacing: .1rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    Button {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    Button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+
