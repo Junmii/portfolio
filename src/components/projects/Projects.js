@@ -68,6 +68,7 @@ export default function Projects() {
                         (<div id="GainsTracker" className={states.gainsActive?'fadeIn':'fadeOut'}>
                             <div className="headerTextContainer">
                                 <h1 className="gainsTrackerHeader">Gains Tracker</h1>
+                                <button className="infoButton">Information</button>
                                 <p>
                                     The Gains Tracker is an app which I am currently developing together with my partner.
                                 </p>
@@ -87,6 +88,7 @@ export default function Projects() {
                         (<div id="WerkenBijDrogisterij" className={states.drogisterijActive?'fadeIn':'fadeOut'}>
                             <div className="headerTextContainer">
                                 <h1 className="wbdHeader">Werkenbijdrogisterij</h1>
+                                <button className="infoButton">Information</button>
                                 <p>
                                     Werkenbijdrogisterij is a website my partner and I have build for my mother. She is a manager at an Etos store and needed a way to set a lower bar for hiring people.
                                 </p>
@@ -104,6 +106,7 @@ export default function Projects() {
                         (<div id="BobBot" className={states.bobActive?'fadeIn':'fadeOut'}>
                             <div className="headerTextContainer">
                                 <h1 className="bobHeader">Bob Bot</h1>
+                                <button className="infoButton">Information</button>
                                 <p>
                                     This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project.
                                 </p>

@@ -60,6 +60,10 @@ p {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.infoButton {
+    display: none;
+}
+
 /*Media querys*/
 
 @media only screen and (min-width: 1200px) {
@@ -72,6 +76,62 @@ p {
     .projectsList {
         width: 13rem;
     }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projectsList {
+        display: none;
+    }
+
+    .infoButton {
+        color: var(--foreground);
+        border-radius: 20px;
+        border: none;
+        font-family: var(--normal-text);
+        width: 10rem;
+        height: 2rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--background);
+    }
+
+    .relativeList {
+        display: none;
+    }
+
+    .projectsContainer {
+        grid-template-columns: 100%;
+    }
+
+    #GainsTracker p, #WerkenBijDrogisterij p, #BobBot p {
+        display: none;
+    }
+
+    #GainsTracker, #WerkenBijDrogisterij, #BobBot {
+        grid-template-columns: 100%;
+    }
+
+    #GainsTracker img, #WerkenBijDrogisterij img, #BobBot img {
+        width: 65%;
+        height: auto;
+    }
+
+    .headerTextContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
 }
 
 /*CSS transitions*/
