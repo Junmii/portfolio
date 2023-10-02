@@ -33,6 +33,16 @@ p {
     .linkContainer {
         width: 25rem;
     }
+
+    .contactContainer h1 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .contactContainer h1 {
+        font-size: 36px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -46,5 +56,9 @@ p {
 
     .contactContainer {
         max-width: 20rem;
+    }
+
+    .contactContainer h1 {
+        font-size: 26px;
     }
 }

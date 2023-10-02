@@ -124,21 +124,22 @@ p {
 }
 
 .inactiveModalContainer {
+    opacity: 0;
     position: relative;
-    bottom: -100%;
-    transition: bottom 0.4s ease-in-out;
+    bottom: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 /* Styling for the visible state */
 .activeModalContainer {
+    opacity: 1;
     position: relative;
     bottom: 100%;
-    transition: bottom 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 #upperModal {
     height: 100%;
-    padding: 1rem;
 }
 
 .noshow {
@@ -196,6 +197,19 @@ p {
 }
 
 /*Media querys*/
+@media only screen and (max-height: 800px) {
+    .project Img {
+        width: 38%;
+    }
+
+    .headerTextContainer h1 {
+        font-size: 36px;
+    }
+
+    .headerTextContainer p {
+        font-size: 26px;
+    }
+}
 
 @media only screen and (min-width: 1000px) {
     .projectsContainer {
@@ -252,7 +266,7 @@ p {
         height: 100%;
         max-height: 0;
         align-items: center;
-        transform: translateY(20px);
+        transform: translateY(-20px);
         opacity: 0;
 
         transition-duration: 0.4s;
@@ -309,6 +323,12 @@ p {
         top: 30px;
         left: 10px;
         font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .modalProjectInfo p {
+        font-size: 18px;
     }
 }
 
