@@ -36,21 +36,36 @@ p {
     font-family: var(--normal-text);
 }
 
-/*Gains Tracker*/
-
-#GainsTracker, #WerkenBijDrogisterij, #BobBot {
+.project {
     position: relative;
     display: grid;
+    visibility: hidden;
     grid-template-columns: auto 50%;
+
     height: 100%;
+    max-height: 0;
     align-items: center;
+    transform: translate(-20px, 0);
+    opacity: 0;
+
+    transition-duration: 0.4s;
+    transition-timing-function:  ease-in-out;
+    transition-property: opacity, transform;
 }
 
-.gainsTrackerHeader, .wbdHeader, .bobHeader {
+.active {
+    visibility: visible;
+    opacity: 1;
+    height:100%;
+    max-height: 100%;
+    transform: translate(0px, 0px);
+}
+
+.headerTextContainer h1 {
     margin: 0;
 }
 
-.gainsTrackerImg, .wbdImg, .bobImg {
+.project Img {
     height: auto;
     width: 70%;
     max-width: 300px;
@@ -60,90 +75,78 @@ p {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.headerTextContainer {
+    margin: 0 0 0 5rem;
+}
+
+.pageContainer {
+    display: flex;
+}
+
 .infoButton {
+    display: none;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.modalContainer {
+    background-color: var(--sections);
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    margin: 0 auto 0 auto;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modalProjectInfo {
+    height: 90%;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.modalProjectInfo button {
+    float: right;
+    color: var(--foreground);
+    border-radius: 20px;
+    border: none;
+    font-family: var(--normal-text);
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--background);
+    margin: 0 0 0.5rem 0.5rem;
+}
+
+.inactiveModalContainer {
+    position: relative;
+    bottom: -100%;
+    transition: bottom 0.4s ease-in-out;
+}
+
+/* Styling for the visible state */
+.activeModalContainer {
+    position: relative;
+    bottom: 100%;
+    transition: bottom 0.4s ease-in-out;
+}
+
+#upperModal {
+    height: 100%;
+    padding: 1rem;
+}
+
+.noshow {
     display: none;
 }
 
-/*Media querys*/
-
-@media only screen and (min-width: 1200px) {
-    .projectsContainer {
-        grid-template-columns: 20% 80%;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    .projectsList {
-        width: 13rem;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .projectsList {
-        display: none;
-    }
-
-    .infoButton {
-        color: var(--foreground);
-        border-radius: 20px;
-        border: none;
-        font-family: var(--normal-text);
-        width: 10rem;
-        height: 2rem;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        background-color: var(--background);
-    }
-
-    .relativeList {
-        display: none;
-    }
-
-    .projectsContainer {
-        grid-template-columns: 100%;
-    }
-
-    #GainsTracker p, #WerkenBijDrogisterij p, #BobBot p {
-        display: none;
-    }
-
-    #GainsTracker, #WerkenBijDrogisterij, #BobBot {
-        grid-template-columns: 100%;
-    }
-
-    #GainsTracker img, #WerkenBijDrogisterij img, #BobBot img {
-        width: 65%;
-        height: auto;
-    }
-
-    .headerTextContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-
-}
-
-/*CSS transitions*/
-
-.fadeOut{
-    transform: translate(-20px, 0);
-    opacity: 0;
-
-}
-.fadeIn{
-    opacity: 1;
-    transform: translate(0px, 0px);
+.show {
+    display: block;
 }
 
 .projectButton {
@@ -191,4 +194,123 @@ p {
 .projectButton:hover {
     cursor: pointer;
 }
+
+/*Media querys*/
+
+@media only screen and (min-width: 1000px) {
+    .projectsContainer {
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .projectsList {
+        width: 13rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projectsList {
+        display: none;
+    }
+
+    .infoButton {
+        color: var(--foreground);
+        border-radius: 20px;
+        border: none;
+        font-family: var(--normal-text);
+        width: 10rem;
+        height: 2rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--background);
+    }
+
+    .relativeList {
+        display: none;
+    }
+
+    .projectsContainer {
+        display: block;
+    }
+
+    .headerTextContainer p {
+        display: none;
+    }
+
+    .project {
+        visibility: hidden;
+        position: relative;
+
+        height: 100%;
+        max-height: 0;
+        align-items: center;
+        transform: translateY(20px);
+        opacity: 0;
+
+        transition-duration: 0.4s;
+        transition-timing-function:  ease-in-out;
+        transition-property: opacity, transform;
+    }
+
+    .active {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        height:100%;
+        max-height: 100%;
+        transform: translateY(0px);
+    }
+
+    .project img {
+        width: 65%;
+        height: auto;
+    }
+
+    .headerTextContainer {
+        margin: 1rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projectContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #next {
+        color: var(--foreground);
+        background-color: var(--background);
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        font-weight: bold;
+    }
+
+    #prev {
+        color: var(--foreground);
+        background-color: var(--background);
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        font-weight: bold;
+    }
+}
+
+
 

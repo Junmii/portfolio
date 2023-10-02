@@ -70,6 +70,13 @@ h2 {
     margin: 0 3rem 0 5rem
 }
 
+@media screen and (max-height: 800px) {
+    h2 {
+        font-size: 22px;
+    }
+
+}
+
 @media screen and (max-width: 900px) {
     .infoContainer {
         max-width: 500px;

@@ -93,7 +93,7 @@ img {
         height: 2rem;
         position: relative;
         overflow: hidden;
-        z-index: 1;
+        z-index: 1000;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         display: flex;
         justify-content: center;
@@ -103,17 +103,23 @@ img {
     }
 
     .dropdownContent {
-        display: block;
         position: absolute;
         background-color: #f9f9f9;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         top: 60px;
+        opacity: 0;
         width: 8rem;
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px;
         font-family: var(--normal-text);
         overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
         z-index: 1;
+        height: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dropdownContent.open {
+        height: 132px;
+        opacity: 1;
     }
 
     .dropdownLink {

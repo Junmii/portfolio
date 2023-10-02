@@ -23,19 +23,17 @@ export default function NavigationBar() {
                 <button className="dropdownButton" onClick={toggleMenu}>
                     Navigation
                 </button>
-                {isOpen && (
-                    <div className="dropdownContent">
-                        <Link to="/AboutMe" className="dropdownLink">
-                            About me
-                        </Link>
-                        <Link to="/Projects" className="dropdownLink">
-                            Projects
-                        </Link>
-                        <Link to="/Contact" className="dropdownLink">
-                            Contact
-                        </Link>
-                    </div>
-                )}
+                <div className={isOpen ? "dropdownContent open" : "dropdownContent"}>
+                    <Link to="/AboutMe" className="dropdownLink" onClick={toggleMenu}>
+                        About me
+                    </Link>
+                    <Link to="/Projects" className="dropdownLink" onClick={toggleMenu}>
+                        Projects
+                    </Link>
+                    <Link to="/Contact" className="dropdownLink" onClick={toggleMenu}>
+                        Contact
+                    </Link>
+                </div>
             </div>
         </Navbar>
     )
