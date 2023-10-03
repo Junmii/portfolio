@@ -78,5 +78,6 @@ p {
 
     .imgContainer {
         height: auto;
+        max-height: 14rem;
     }
 }

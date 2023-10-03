@@ -73,6 +73,26 @@ h2 {
     margin: 0;
 }
 
+
+@media screen and (max-height: 800px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 26px;
+    }
+
+    .learning {
+        height: 8rem;
+    }
+
+    .known {
+        height: 16rem;
+    }
+
+}
+
 @media screen and (max-width: 900px) {
     .infoContainer {
         max-width: 500px;
@@ -123,24 +143,6 @@ h2 {
     }
 }
 
-@media screen and (max-height: 800px) {
-    h2 {
-        font-size: 28px;
-    }
-
-    .intro p {
-        font-size: 26px;
-    }
-
-    .learning {
-        height: 8rem;
-    }
-
-    .known {
-        height: 16rem;
-    }
-
-}
 
 @media screen and (max-width: 380px) {
     .intro p {

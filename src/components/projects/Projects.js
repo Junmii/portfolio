@@ -9,7 +9,7 @@ const projectsData = [
     {
         name: "Gains Tracker",
         description:
-            "The Gains Tracker is an app which I am currently developing together with my partner. \nSince we and our friends go to the gym quite often, he came up with the idea to build an app in which we can log our process and check out our friends process’. \nHe designs and develops the Back-End and I have designed and will be building the Front-End!",
+            "The Gains Tracker is an app which I am currently developing together with my partner. \nSince our friends and us go to the gym quite often, he came up with the idea to build an app in which we can log our own process and check out that of our friends. \nHe designs and develops the Back-End and I have designed and am building the Front-End!",
         image: gainsTrackerHome,
     },
     {
@@ -21,7 +21,7 @@ const projectsData = [
     {
         name: "Bob Bot",
         description:
-            "This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project. \nBob Bot is just a Discord Bot who can do silly little commands, but with the face of my bunny, Bob! 🐰",
+            "This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project. \nBob Bot is just a Discord Bot who execute certain commands, but with the face of my bunny, Bob! 🐰",
         image: bob,
     },
 ];
