@@ -13,7 +13,7 @@ export default function AboutMe() {
         <div className="infoContainer">
             <div className="intro">
                 <p>
-                    I’m a third year student at the University of Applied Sciences Utrecht who loves to design apps and websites!
+                    I’m a fourth year student at the University of Applied Sciences Utrecht who loves to design apps and websites!
                 </p>
                 <p>
                     My specialization is in Back-End, but I prefer doing Front-End work. I like being creative.

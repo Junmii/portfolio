@@ -11,9 +11,13 @@ export default function NavigationBar() {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false);
+    }
+
     return (
         <Navbar>
-            <Link to="/" onClick={toggleMenu}><img src={logo} alt="Logo" /></Link>
+            <Link to="/" onClick={closeMenu}><img src={logo} alt="Logo" /></Link>
             <div className="buttonContainer">
                 <Link to="/AboutMe" className="linkButton">About me</Link>
                 <Link to="/Projects" className="linkButton">Projects</Link>
