@@ -13,7 +13,7 @@ export default function NavigationBar() {
 
     return (
         <Navbar>
-            <Link to="/"><img src={logo} alt="Logo" /></Link>
+            <Link to="/" onClick={toggleMenu}><img src={logo} alt="Logo" /></Link>
             <div className="buttonContainer">
                 <Link to="/AboutMe" className="linkButton">About me</Link>
                 <Link to="/Projects" className="linkButton">Projects</Link>

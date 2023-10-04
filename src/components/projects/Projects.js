@@ -21,7 +21,7 @@ const projectsData = [
     {
         name: "Bob Bot",
         description:
-            "This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project. \nBob Bot is just a Discord Bot who execute certain commands, but with the face of my bunny, Bob! 🐰",
+            "This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project. \nBob Bot is just a Discord Bot who can execute certain commands, but with the face of my bunny, Bob! 🐰",
         image: bob,
     },
 ];
