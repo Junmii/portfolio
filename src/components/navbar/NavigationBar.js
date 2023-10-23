@@ -1,7 +1,7 @@
 import './NavigationBar.css';
 import logo from '../../resources/JK.png'
 import Navbar from 'react-bootstrap/Navbar';
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useState} from "react";
 
 export default function NavigationBar() {
