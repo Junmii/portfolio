@@ -17,6 +17,13 @@
   background-position: center center;
   background-size: 80% 80%;
   height: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .pageContainer {
+    padding: 1rem 0;    
+  } 
 }
 
 header {
@@ -70,6 +77,10 @@ header {
 }
 
 @media screen and (max-width: 900px) {
+  .page {
+    min-height: 100%;
+    height: auto;
+  }
   .pageContainer {
     display: flex;
     align-items: center;

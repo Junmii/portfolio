@@ -1,11 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./Projects.css";
 import { Button } from "react-bootstrap";
 import gainsTrackerHome from "../../resources/gainsTrackerHome.png";
 import wbd from "../../resources/wbd.jpg";
 import bob from "../../resources/bob.png";
+import portfolio from "../../resources/portfolio.png";
+import portfolioH from "../../resources/portfolio-h.png";
 
 const projectsData = [
+    {
+        name: "Portfolio Henk Hardeman",
+        description: "The project I'm currently working on is a portfolio website for the writer Henk Hardeman. Together with my partner, we communicate with our client and build him a website based on his preferences.",
+        image: portfolioH,
+    },
     {
         name: "Gains Tracker",
         description:
@@ -24,20 +31,20 @@ const projectsData = [
             "This is a small side project of mine that doesn't really have to do much with Front-End, but I'd still like to include it since it was my first personal Software Development project. \nBob Bot is just a Discord Bot who can execute certain commands, but with the face of my bunny, Bob! 🐰",
         image: bob,
     },
+    {
+        name: "New portfolio!",
+        description: "Right now I am working on a new version of my portfolio. This one is going to have a more nostalgic look, as if you just landed on a MySpace profile!",
+        image: portfolio,
+    },
 ];
 
 export default function Projects() {
     const [activeProject, setActiveProject] = useState("Gains Tracker"); // Set "Gains Tracker" as active by default
-    const [isModalVisible, setIsModalVisible] = useState(false);
     let [dontshowprev, setDontShowPrev] = useState(true);
     let [dontshownext, setDontShowNext] = useState(false);
 
     const handleClick = (projectName) => {
         setActiveProject(projectName);
-    };
-
-    const handleInfoButtonClick = () => {
-        setIsModalVisible(!isModalVisible);
     };
 
     const handleNext = () => {
@@ -78,23 +85,9 @@ export default function Projects() {
                     <Project
                         key={project.name}
                         project={project}
-                        isActive={activeProject === project.name}
-                        isModalVisible={isModalVisible}
-                        onInfoButtonClick={handleInfoButtonClick}
+                        isActive={activeProject === project.name} 
                     />
                 ))}
-            </div>
-            <div id="upperModal" className={isModalVisible ? "activeModalContainer" : "inactiveModalContainer"}>
-                <div className="modalContainer">
-                    {projectsData.map((project) => (
-                        <InfoModal
-                            key={project.name}
-                            project={project}
-                            isVisible={activeProject === project.name}
-                            onInfoButtonClick={handleInfoButtonClick}
-                        />
-                    ))}
-                </div>
             </div>
             <button id="next" className={dontshownext ? "noshow" : "show"} onClick={handleNext}> &#x3e; </button>
             <button id="prev" className={dontshowprev ? "noshow" : "show"} onClick={handlePrevious}> &#x3c; </button>
@@ -102,34 +95,33 @@ export default function Projects() {
     );
 }
 
-function Project({ project, isActive, onInfoButtonClick }) {
+function Project({ project, isActive }) {
+    const [showInfo, setShowInfo] = useState(false);
+
+    const toggleInfo = () => {
+        setShowInfo(prev => !prev);
+    };
+
     return (
         <div className={isActive ? "project active" : "project"}>
             <div className="headerTextContainer">
                 <h1 className={`${project.name.replace(/\s+/g, "")}Header`}>
                     {project.name}
                 </h1>
-                <button className="infoButton" onClick={onInfoButtonClick}>Information</button>
-                <p>{project.description}</p>
+                <p className="projectDescription">{project.description}</p>
+                <button className="infoButton" onClick={toggleInfo}>
+                    {showInfo ? "Show Image" : "Information"}
+                </button>
             </div>
-            <img
-                src={project.image}
-                className={`${project.name.replace(/\s+/g, "")}Img`}
-                alt={`Screenshot of ${project.name}`}
-            />
+            {showInfo ? (
+                <p className="projectDescription">{project.description}</p>
+            ) : (
+                <img
+                    src={project.image}
+                    className={`${project.name.replace(/\s+/g, "")}Img`}
+                    alt={`Screenshot of ${project.name}`}
+                />
+            )}
         </div>
     );
-}
-
-function InfoModal({ project, isVisible, onInfoButtonClick }) {
-    if (!isVisible) {
-        return null;
-    }
-
-    return (
-        <div className="modalProjectInfo">
-            <button onClick={onInfoButtonClick}>&#10006;</button>
-            <p>{project.description}</p>
-        </div>
-    )
 }

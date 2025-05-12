@@ -89,8 +89,8 @@ img {
         border-radius: 20px;
         border: none;
         font-family: var(--normal-text);
-        width: 8rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         position: relative;
         overflow: hidden;
         z-index: 1000;
@@ -115,6 +115,7 @@ img {
         z-index: 1;
         height: 0;
         transition: all 0.3s ease-in-out;
+        right: 0.75rem;
     }
 
     .dropdownContent.open {

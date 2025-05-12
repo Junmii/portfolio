@@ -2,40 +2,37 @@ import "./AboutMe.css"
 import figma from "../../resources/icons/figma.png"
 import html from "../../resources/icons/html.png"
 import css from "../../resources/icons/css.png"
-import angular from "../../resources/icons/angular.png"
+import vue from "../../resources/icons/vue.png"
 import js from "../../resources/icons/js.png"
 import java from "../../resources/icons/java.png"
 import react from "../../resources/icons/react.png"
 import csharp from "../../resources/icons/csharp.png"
+import typescript from "../../resources/icons/typescript.png"
 
 export default function AboutMe() {
     return (
         <div className="infoContainer">
             <div className="intro">
                 <p>
-                    I’m a Junior Front-End Developer who loves to design apps and websites!
+                    My name is Joy! I am a Frontend Developer with a passion for UI/UX design. Besides developing I also
+                    love to design webpages and apps.
                 </p>
                 <p>
-                    My specialization is in Back-End, but I prefer doing Front-End work. I like being creative.
-                </p>
-                <p>
-                    In my free time I prefer doing things like reading books, playing games or designing things.
+                    My passion for computers and technology is something I have had since I was little. Aside from my interest in technology, I love being creative. Reading, writing and drawing or painting are activities I thoroughly enjoy!
                 </p>
             </div>
             <div className="languagesAndFrameworks">
-                <h2 className="current">Currently learning</h2>
-                <div className="learning">
-                    <img src={figma} alt="figma logo" className="figma"/>
-                    <img src={react} alt="react logo" className="react"/>
-                </div>
-                <h2>Languages and frameworks</h2>
+                <h2>Tech stack</h2>
                 <div className="known">
-                    <img src={html} alt="html logo" className="html"/>
-                    <img src={css} alt="css logo" className="css"/>
-                    <img src={js} alt="js logo" className="js"/>
-                    <img src={java} alt="java logo" className="java"/>
-                    <img src={csharp} alt="csharp logo" className="csharp"/>
-                    <img src={angular} alt="angular logo" className="angular"/>
+                    <img src={vue} alt="vue logo" className="tech-icon"/>
+                    <img src={figma} alt="figma logo" className="tech-icon"/>
+                    <img src={react} alt="react logo" className="tech-icon"/>
+                    <img src={html} alt="html logo" className="tech-icon"/>
+                    <img src={css} alt="css logo" className="tech-icon"/>
+                    <img src={js} alt="js logo" className="tech-icon"/>
+                    <img src={java} alt="java logo" className="tech-icon"/>
+                    <img src={csharp} alt="csharp logo" className="tech-icon"/>
+                    <img src={typescript} alt="typescript logo" className="tech-icon"/>
                 </div>
             </div>
         </div>
