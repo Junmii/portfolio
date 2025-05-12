@@ -141,11 +141,10 @@ p {
 
 .projectDescription {
     padding: 1rem;
-    font-size: 1.2rem;
-}
-
-#upperModal {
-    height: 100%;
+    
+    @media (max-width: 800px) {
+        font-size: 1rem;
+    }
 }
 
 .noshow {
